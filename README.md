@@ -29,7 +29,10 @@ $
 
 # Experiments
 
-These are some emojis !! :sunglasses::star::punch:
+These are some emojis !! 
+:sunglasses:
+:star:
+:punch:
 
 ## Keyboard Shortcut 
 
