@@ -1,3 +1,4 @@
+
 # Number row characters
 !
 @
@@ -47,7 +48,7 @@ Shortcuts I would like to start using:
 - Ctrl + S (Save current webpage)
 
 ## Search Experiment 
-Line
+'Line
 line
 lines
 line 5
@@ -57,4 +58,4 @@ line73.4
 end of line
 end-of-line
 outline
-linear
+linear'
