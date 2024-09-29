@@ -20,7 +20,7 @@ $
 - (
 - )
 
-\#
+
 
 # Links
 [Github Pages](https://pages.github.com/)
@@ -34,14 +34,14 @@ These are some emojis !! :sunglasses::star::punch:
 ## Keyboard Shortcut 
 
 shortcuts I often use:
->> Ctrl-C (copy)
->> Ctrl-V (paste)
->> Ctrl-T (opens new tab)
+- Ctrl-C (copy)
+- Ctrl-V (paste)
+- Ctrl-T (opens new tab)
 
 Shortcuts I would like to start using:
->> Ctrl + Alt + F4 (Close all tabs except the current tab)
->> Ctrl + Shift + T (Reopen the last closed tab)
->> Ctrl + S (Save current webpage)
+- Ctrl + Alt + F4 (Close all tabs except the current tab)
+- Ctrl + Shift + T (Reopen the last closed tab)
+- Ctrl + S (Save current webpage)
 
 ## Search Experiment 
 Line
