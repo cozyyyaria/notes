@@ -52,4 +52,4 @@ Here are some code lines: `line`, `lines`, `line 5`, `line-7`, `line72`, `line73
 
 ## CLI Commands
 
-These are some CLI command [CLI commands](docs/cli.md)
+These are some CLI command [CLI commands](/docs/cli.md)
