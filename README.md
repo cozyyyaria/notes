@@ -53,3 +53,7 @@ Here are some code lines: `line`, `lines`, `line 5`, `line-7`, `line72`, `line73
 ## CLI Commands
 
 These are some CLI command [CLI commands](/docs/cli.md)
+
+Here is my [JSON File](/docs/players.json)
+
+Here is my [YAML File](/docs/players.yml)
