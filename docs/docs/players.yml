@@ -1,17 +1,17 @@
 ---
-- name: Lebron James # string
-  sport: Basketball # string
+- name: Lebron James 
+  sport: Basketball 
   team:
-    name: Lakers # string
-    city: Los Angeles # string
-  position: Forward # string
-  age: 38 # integer
-- name: Lionel Messi # string
-  sport: Soccer # string
+    name: Lakers 
+    city: Los Angeles 
+  position: Forward 
+  age: 38 
+- name: Lionel Messi 
+  sport: Soccer 
   team:
-    name: Inter Miami # string
-    city: Miami # string
-  position: Forward # string
+    name: Inter Miami 
+    city: Miami 
+  position: Forward 
   age: 36 # integer
 - name: Serena Williams # string
   sport: Tennis # string
@@ -20,10 +20,10 @@
     city: # null
   position: Player # string
   Age: 41 # integer
-- name: Tom Brady # string
-  sport: Football # string
+- name: Tom Brady 
+  sport: Football 
   team:
-    name: Buccaneers # string
-    city: Tampa Bay # string
-  position: Quarterback # string
-  age: 46 #integer
+    name: Buccaneers 
+    city: Tampa Bay 
+  position: Quarterback
+  age: 46 
