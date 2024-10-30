@@ -1,3 +1,4 @@
+## Ariana's COMP 1238 Lab works 
 
 # Number row characters
 !
@@ -54,6 +55,6 @@ Here are some code lines: `line`, `lines`, `line 5`, `line-7`, `line72`, `line73
 
 These are some CLI command [CLI commands](/docs/cli.md)
 
-Here is my [JSON File](/docs/players.json)
-
+## JSON and YAML FIle
+Here is my [JSON FIle](/docs/docs/players.json)
 Here is my [YAML File](/docs/players.yml)
