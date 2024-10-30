@@ -12,7 +12,7 @@
     name: Inter Miami 
     city: Miami 
   position: Forward 
-  age: 36 # integer
+  age: 36 
 - name: Serena Williams # string
   sport: Tennis # string
   Team: 
