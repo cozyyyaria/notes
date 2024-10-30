@@ -58,4 +58,4 @@ These are some CLI command [CLI commands](/docs/cli.md)
 ## JSON and YAML FIle
 Here is my [JSON FIle](/docs/docs/players.json)
 
-Here is my [YAML File](/docs/players.yml)
+Here is my [YAML file](/docs/docs/players.yml)
