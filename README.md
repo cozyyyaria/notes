@@ -61,4 +61,5 @@ Here is my [JSON FIle](/docs/docs/players.json)
 Here is my [YAML file](/docs/docs/players.yml)
 
 ## This is my SQL file
-Here is my [lab11sql](/docs/docs/lab11.sql)
+Here is my [Lab11sql](/docs/docs/lab11.sql)
+Here is my [Lab12sql](/docs/docs/lab12.sql)
