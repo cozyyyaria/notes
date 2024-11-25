@@ -1,55 +1,56 @@
--- Assignments with course details
-SELECT a.title, a.due_date, c.course_name, c.lecture_time
-FROM assignments AS a
-JOIN courses AS c
-  ON a.course_id = c.course_id
-ORDER BY a.due_date;
+-- Concatenate course_name and semester with a hyphen
+SELECT course_name || ' - ' || semester AS course_and_semester
 
--- Courses with lab sessions on Tuesday
-SELECT course_id, course_name
+-- Find courses with lab sessions scheduled on Fridays
+SELECT course_id, course_name, lab_time
 FROM courses
-WHERE lab_time LIKE 'Tue%';
+WHERE lab_time LIKE 'Fri%';
 
--- Count of assignments with status "Not Started"
-SELECT COUNT(*) AS not_started_count
+-- List assignments with due dates after the current date
+SELECT *
 FROM assignments
-WHERE status = 'Not Started';
+WHERE due_date > date('now');
 
--- Most recent completed assignment
-SELECT title, due_date
+-- Count the number of assignments grouped by their status
+SELECT status, COUNT(*) AS assignment_count
 FROM assignments
-WHERE status = 'Completed'
-ORDER BY due_date DESC
+GROUP BY status;
+
+-- Find the course with the longest name
+SELECT course_id, course_name, LENGTH(course_name) AS name_length
+FROM courses
+ORDER BY name_length DESC
 LIMIT 1;
 
--- Assignments due in October 2024
-SELECT title, due_date
+-- List all course names in uppercase
+SELECT UPPER(course_name) AS uppercase_name
+FROM courses;
+
+-- List titles of assignments due in September (any year)
+SELECT title
 FROM assignments
-WHERE due_date LIKE '2024-10%';
+WHERE due_date LIKE '____-09-%';
 
--- Assignments due on 2024-10-08
-SELECT title, course_id
+-- Find assignments where the due_date is NULL
+SELECT *
 FROM assignments
-WHERE due_date = '2024-10-08';
+WHERE due_date IS NULL;
 
--- Latest due date in the assignments table
-SELECT MAX(due_date) AS latest_due_date
-FROM assignments;
+-- Count total assignments for each course
+SELECT c.course_id, c.course_name, COUNT(a.id) AS total_assignments
+FROM courses c
+LEFT JOIN assignments a ON c.course_id = a.course_id
+GROUP BY c.course_id, c.course_name;
 
-
--- Earliest due date in the assignments table
-SELECT MIN(due_date) AS earliest_due_date
-FROM assignments;
-
-
--- Titles and due dates for assignments in course COMP1234
-SELECT title, due_date
-FROM assignments
-WHERE course_id = 'COMP1234';
-
+-- Find courses with no assignments
+SELECT c.course_id, c.course_name
+FROM courses c
+LEFT JOIN assignments a ON c.course_id = a.course_id
+WHERE a.id IS NULL;
 
 
 -- Create the courses table  
+DROP TABLE IF EXISTS courses;
 CREATE TABLE courses (  
     course_id TEXT PRIMARY KEY,  -- String ID for courses, e.g., "COMP1234"  
     semester TEXT NOT NULL,  -- Semester the course is offered (e.g., "2024-3" for Fall 2024)
@@ -60,6 +61,7 @@ CREATE TABLE courses (
 );  
   
 -- Create the assignments table  
+DROP TABLE IF EXISTS assignments;
 CREATE TABLE assignments (  
     id INTEGER PRIMARY KEY AUTOINCREMENT,  -- Unique ID for each assignment  
     course_id TEXT NOT NULL,  -- Foreign key referencing courses  
@@ -135,6 +137,7 @@ INSERT INTO assignments (course_id, title, status, due_date) VALUES
 ('COMP1234', 'JavaScript Interactive Page', 'Not Started', '2024-10-10'),  
 ('COMP1238', 'SQL Query Assignment', 'Completed', '2024-09-18'),  
 ('COMP1238', 'Data Normalization Task', 'In Progress', '2024-10-08'),  
+('COMP1238', 'Assignment without due date', 'Not Started', NULL),  
 ('MATH1162', 'Calculus Problem Set', 'Completed', '2024-09-12'),  
 ('MATH1162', 'Linear Algebra Quiz', 'Not Started', '2024-10-15'),  
 ('COMM2000', 'Communication Skills Essay', 'In Progress', '2024-09-25'),  
